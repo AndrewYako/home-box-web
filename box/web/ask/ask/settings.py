@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ask.apps.QaConfig',
     'qa.apps.QaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
