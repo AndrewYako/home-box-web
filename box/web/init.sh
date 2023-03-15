@@ -26,9 +26,8 @@ sudo python3 manage.py migrate
 sudo python3 manage.py runserver 0:8000
 
 
-
-
 #python --version
 #pip --version
 # jobs -lS
+#fuser 80/tcp
 # sudo kill -9 ...
