@@ -9,11 +9,13 @@ sudo /etc/init.d/nginx restart
 sudo apt purge -y python2.7-minimal
 sudo apt install python3.5
 sudo unlink /usr/bin/python3
+sudo unlink /usr/bin/pip3
+
 sudo ln -s /usr/bin/python3.5 /usr/bin/python3
 sudo ln -s /usr/bin/python3.5 /usr/bin/python
+sudo curl https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py
 sudo python3.5 get-pip.py --force-reinstall
-sudo apt install -y python3-pip
-sudo ln -s /usr/bin/pip3 /usr/bin/pip
+#sudo ln -s /usr/bin/pip3 /usr/bin/pip
 sudo pip3 install --upgrade pip
 sudo pip3 install --upgrade django==2.1
 sudo pip3 install --upgrade gunicorn
@@ -21,7 +23,7 @@ source /home/box/web/django_env/bin/activate
 gunicorn --bind="0.0.0.0:8080" hello:wsgi_application
 cd /home/box/web/ask/
 sudo python3 manage.py migrate
-sudo python3 manage.py runserver 0.0.0.0:8000
+sudo python3 manage.py runserver 0:8000
 
 
 
