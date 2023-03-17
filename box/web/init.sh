@@ -19,9 +19,9 @@ sudo python3.5 get-pip.py --force-reinstall
 sudo pip3 install --upgrade pip
 sudo pip3 install --upgrade django==2.1
 sudo pip3 install --upgrade gunicorn
-source /home/box/web/django_env/bin/activate
-gunicorn --bind="0.0.0.0:8080" hello:wsgi_application
 
+gunicorn --bind="0.0.0.0:8080" hello:wsgi_application
+source /home/box/web/django_env/bin/activate
 cd /home/box/web/ask/
 sudo python3 manage.py migrate
 sudo python3 manage.py runserver 0:8000
