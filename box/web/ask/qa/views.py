@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def hangling_404(request, exception):
-    return render(request, "404.html", {})
+    return render(request, "404.html", status=404)
 
 def test(request, *args, **kwargs):
     return HttpResponse('OK')
