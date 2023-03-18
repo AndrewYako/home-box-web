@@ -20,3 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("qa.urls")),
 ]
+
+handler404 = "qa.views.hangling_404"
