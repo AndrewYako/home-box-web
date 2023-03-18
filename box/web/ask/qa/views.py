@@ -1,10 +1,7 @@
-from django.http import HttpResponse,HttpResponseNotFound
+from django.http import HttpResponse
 
 def test(request, *args, **kwargs):
-    if test:
-        return HttpResponse('OK')
-    else:
-        return HttpResponseNotFound('404')
+    return HttpResponse('OK')
 
 def detail(request, qa_id):
     return HttpResponse(qa_id)
