@@ -26,9 +26,12 @@ cd /home/box/web/ask/
 sudo python3 manage.py migrate
 sudo python3 manage.py runserver 0:8000
 
-
+#sudo python3 manage.py makemigrations qa
+#sudo python3 manage.py migrate
 #python --version
 #pip --version
 # jobs -lS
 #fuser 80/tcp
 # sudo kill -9 ...
+sudo service mysql status
+sudo service mysql restart
